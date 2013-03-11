@@ -67,7 +67,7 @@ describe('client.test.js', function () {
 
         client.refreshCounter = 1;
         // next upload will refresh servers
-        client.upload(logopath, function (err, info) {
+        client.upload(fs.createReadStream(logopath), 'png', function (err, info) {
           should.not.exist(err);
           info.should.have.keys('name', 'url', 'size');
           info.size.should.be.a('number');
@@ -75,7 +75,7 @@ describe('client.test.js', function () {
           info.url.should.be.a('string').with.match(/\.png$/);
           info.url.should.include('http://img02.daily.taobaocdn.net/tfscom/');
 
-          client.upload(logopath, function (err, info) {
+          client.upload(fs.readFileSync(logopath), 'png', function (err, info) {
             should.not.exist(err);
             info.should.have.keys('name', 'url', 'size');
             info.size.should.be.a('number');
