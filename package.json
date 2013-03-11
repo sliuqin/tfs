@@ -25,5 +25,8 @@
   "keywords": [
     "node-tfs", "tfs", "cdn"
   ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
   "author": "suqian.yf <suqian.yf@taobao.com>"
 }
