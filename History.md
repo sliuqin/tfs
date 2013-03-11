@@ -1,4 +1,10 @@
 
+0.1.1 / 2013-03-11 
+==================
+
+  * Merge pull request #1 from dead-horse/stream
+  * support stream and buffer upload
+
 0.1.0 / 2012-12-14 
 ==================
 

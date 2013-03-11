@@ -33,6 +33,16 @@ client.upload(filepath, function (err, info) {
   // }
 });
 
+// upload a stream
+client.upload(fs.createReadStream(filepath), 'jpg', function (err, info) {
+  console.log(info);
+  // { 
+  //   filename: 'T2xRETBgZv1RCvBVdL.jpg', 
+  //   url: 'http://img1.tfs.com/tfscom/T2xRETBgZv1RCvBVdL.jpg',
+  //   size: 1024
+  // }
+});
+
 // upload custom name file
 client.uploadFile(filepath, '320', 'foo.jpg', function (err, info) {
   console.log(info);
@@ -137,13 +147,14 @@ Client.prototype.removeFile = function (uid, filename, callback, timeout);
 $ git summary 
 
  project  : tfs
- repo age : 2 weeks
- active   : 5 days
- commits  : 23
+ repo age : 3 months
+ active   : 8 days
+ commits  : 27
  files    : 15
  authors  : 
-    19  苏千                  82.6%
-     4  fengmk2                 17.4%
+    19  苏千                  70.4%
+     6  fengmk2                 22.2%
+     2  不四                  7.4%
 ```
 
 ## License 
