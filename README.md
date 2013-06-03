@@ -142,6 +142,13 @@ Client.prototype.uploadFile = function (filepath, uid, filename, options, callba
 Client.prototype.removeFile = function (uid, filename, callback, timeout);
 ```
 
+## Events
+
+* `ready`: If client init done, will `client.emit('ready')`.
+* `error`: If client init error, will `client.emit('error', err)`. User must listen this event once, otherise node process will throw it.
+* `refreshError`: If `refreshServers()` error, will `client.emit('refreshError', err)`.
+* `servers`: If got new servers list, will `client.emit('servers', servers)`.
+
 ## Authors
 
 ```bash
