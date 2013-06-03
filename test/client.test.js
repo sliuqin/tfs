@@ -34,14 +34,29 @@ describe('client.test.js', function () {
 
   var logopath = path.join(path.dirname(__dirname), 'logo.png');
 
-  afterEach(function () {
-    mm.restore();
-  });
+  afterEach(mm.restore);
 
   it('should throw missing appkey error', function () {
     (function () {
       tfs.createClient();
     }).should.throw('missing appkey');
+  });
+
+  it('should emit error when getAppid() error', function (done) {
+    var tfsClientError = tfs.createClient({
+      appkey: 'tfscom',
+      rootServer: '10.232.4.44:3800',
+      imageServers: [
+        'img01.daily.taobaocdn.net',
+        'img02.daily.taobaocdn.net',
+      ],
+    });
+    mm.error(tfsClientError, 'getAppid');
+    tfsClientError.on('error', function (err) {
+      should.exists(err);
+      err.message.should.equal('mm mock error');
+      done();
+    });
   });
 
   describe('upload()', function () {
@@ -99,10 +114,11 @@ describe('client.test.js', function () {
     });
 
     it('should upload 500 error', function (done) {
-      mm.http.request(/\/v1\/tfscom/, new Buffer(''), {});
+      mm.http.request(/\/v1\/tfscom/, fs.readFileSync(__filename), {});
       client.upload(logopath, function (err, info) {
         should.exist(err);
-        err.message.should.equal('Unexpected end of input');
+        err.message.should.include('Unexpected token');
+        err.data.should.length(1024);
         should.not.exist(info);
         done();
       });
