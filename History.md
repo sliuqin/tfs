@@ -1,4 +1,10 @@
 
+0.1.3 / 2013-06-03 
+==================
+
+  * refresh servers every 10 minutes. fixed #2
+  * use blanket instead of jscover
+
 0.1.2 / 2013-03-11 
 ==================
 
