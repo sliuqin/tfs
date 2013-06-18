@@ -38,7 +38,7 @@ client.upload(filepath, function (err, info) {
 client.upload(fs.createReadStream(filepath), 'jpg', function (err, info) {
   console.log(info);
   // { 
-  //   filename: 'T2xRETBgZv1RCvBVdL.jpg', 
+  //   name: 'T2xRETBgZv1RCvBVdL.jpg', 
   //   url: 'http://img1.tfs.com/tfscom/T2xRETBgZv1RCvBVdL.jpg',
   //   size: 1024
   // }
@@ -48,7 +48,7 @@ client.upload(fs.createReadStream(filepath), 'jpg', function (err, info) {
 client.uploadFile(filepath, '320', 'foo.jpg', function (err, info) {
   console.log(info);
   // { 
-  //   filename: 'L1/1/320/foo.jpg',
+  //   name: 'L1/1/320/foo.jpg',
   //   url: 'http://img1.tfs.com/L1/1/320/foo.jpg',
   //   size: 1984
   // }
