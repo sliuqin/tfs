@@ -28,7 +28,7 @@ var client = tfs.createClient({
 client.upload(filepath, function (err, info) {
   console.log(info);
   // { 
-  //   filename: 'T2xRETBgZv1RCvBVdK.jpg', 
+  //   name: 'T2xRETBgZv1RCvBVdK.jpg', 
   //   url: 'http://img1.tfs.com/tfscom/T2xRETBgZv1RCvBVdK.jpg',
   //   size: 1024
   // }
