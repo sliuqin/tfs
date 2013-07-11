@@ -25,7 +25,7 @@ describe('client.test.js', function () {
 
   var tfsClient = tfs.createClient({
     appkey: 'tfscom',
-    rootServer: '10.232.4.44:3800',
+    rootServer: 'restful-store.daily.tbsite.net:3800',
     imageServers: [
       'img01.daily.taobaocdn.net',
       'img02.daily.taobaocdn.net',
@@ -45,7 +45,7 @@ describe('client.test.js', function () {
   it('should emit error when getAppid() error', function (done) {
     var tfsClientError = tfs.createClient({
       appkey: 'tfscom',
-      rootServer: '10.232.4.44:3800',
+      rootServer: 'restful-store.daily.tbsite.net:3800',
       imageServers: [
         'img01.daily.taobaocdn.net',
         'img02.daily.taobaocdn.net',
@@ -63,7 +63,7 @@ describe('client.test.js', function () {
     
     var client = tfs.createClient({
       appkey: 'tfscom',
-      rootServer: '10.232.4.44:3800',
+      rootServer: 'restful-store.daily.tbsite.net:3800',
       imageServers: [
         'img01.daily.taobaocdn.net',
         'img02.daily.taobaocdn.net',
@@ -255,7 +255,7 @@ describe('client.test.js', function () {
     before(function () {
       client = tfs.createClient({
         appkey: 'tfscom',
-        rootServer: '10.232.4.44:3800'
+        rootServer: 'restful-store.daily.tbsite.net:3800'
       });
     });
 
@@ -335,7 +335,7 @@ describe('client.test.js', function () {
     
     var c = tfs.createClient({
       appkey: 'tfscom',
-      rootServer: '10.232.4.44:3800',
+      rootServer: 'restful-store.daily.tbsite.net:3800',
       imageServers: [
         'img01.daily.taobaocdn.net',
         'img02.daily.taobaocdn.net',
