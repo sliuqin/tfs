@@ -1,4 +1,11 @@
 
+0.1.4 / 2013-07-11 
+==================
+
+  * update daily host; fixed deps version
+  * fixed #3 update readme
+  * update readme events
+
 0.1.3 / 2013-06-03 
 ==================
 
