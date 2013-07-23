@@ -6,7 +6,7 @@ tfs
 [TFS: Taobao FileSystem](http://code.taobao.org/p/tfs/src/) nodejs client.
 
 * [RESTful API](http://baike.corp.taobao.com/index.php/CS_RD/tfs/use_web_service)
-* jscoverage: [98%](http://fengmk2.github.com/coverage/tfs.html)
+* [Diagnose Tools](http://baike.corp.taobao.com/index.php/CS_RD/tfs/diagnose)
 
 ## Install
 
