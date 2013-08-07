@@ -19,9 +19,20 @@ $ npm install tfs
 ```js
 var tfs = require('tfs');
 
+// var client = tfs.createClient({
+//   rootServer: '$host:port',
+//   appkey: '$your_appkey',
+//   imageServers: ['$your_server1', '$your_server2']
+// });
+
+// e.g.: test environment on tb daily
 var client = tfs.createClient({
-  rootServer: '$host:port',
-  appkey: '$your_appkey',
+  rootServer: 'restful-store.daily.tbsite.net:3800',
+  appkey: 'tfscom',
+  imageServers: [
+    'img01.daily.taobaocdn.net',
+    'img02.daily.taobaocdn.net'
+  ]
 });
 
 // upload normal file
